@@ -35,3 +35,17 @@ assets/css/style.css   Estilos del dashboard
 assets/js/main.js      Nota final en vivo y cierre de alertas
 database.sql           Esquema y datos de ejemplo
 ```
+
+## Base de datos
+
+`database.sql` crea `academia_db` con tres tablas:
+
+| Tabla | Campos principales |
+|---|---|
+| `estudiantes` | nombre, cédula (única), teléfono, correo, país |
+| `materias` | ncurso, cuatrimestre, anio, docente |
+| `calificaciones` | estudiante_id, materia_id, cuatro rubros y `nota_final` |
+
+Borrar un estudiante o una materia borra también sus calificaciones
+(`ON DELETE CASCADE`). El script incluye 3 estudiantes, 3 materias y
+3 calificaciones de ejemplo.
