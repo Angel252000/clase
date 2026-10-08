@@ -59,3 +59,17 @@ Borrar un estudiante o una materia borra también sus calificaciones
 4. Entra a `http://localhost:8888/<carpeta>/index.php`.
 
 Si la conexión falla, la página muestra el error de MySQL en lugar del panel.
+
+## Reglas de negocio
+
+**Nota final** = promedio simple de los cuatro rubros
+(devocionales, cotidianos, complementarios, proyectos). La calcula MySQL en
+la columna `nota_final`; el formulario la muestra antes de guardar.
+Se aprueba con **70** o más.
+
+Validaciones del servidor:
+
+- Cada rubro entre 0 y 100; no se repite la pareja estudiante + materia.
+- Cédula con formato `001-1234567-8` y sin duplicados.
+- Teléfono opcional con formato `809-555-0000`; correo opcional válido.
+- Materia: nombre de 3 a 150 caracteres y año entre 2020 y 2030.
