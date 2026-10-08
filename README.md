@@ -49,3 +49,13 @@ database.sql           Esquema y datos de ejemplo
 Borrar un estudiante o una materia borra también sus calificaciones
 (`ON DELETE CASCADE`). El script incluye 3 estudiantes, 3 materias y
 3 calificaciones de ejemplo.
+
+## Cómo correrlo (MAMP)
+
+1. Copia la carpeta dentro de `htdocs` de MAMP.
+2. Abre phpMyAdmin e importa `database.sql`.
+3. Revisa `config/db.php`: por defecto usa `root` / `root` en `localhost`,
+   que es lo que trae MAMP.
+4. Entra a `http://localhost:8888/<carpeta>/index.php`.
+
+Si la conexión falla, la página muestra el error de MySQL en lugar del panel.
