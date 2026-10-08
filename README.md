@@ -73,3 +73,13 @@ Validaciones del servidor:
 - Cédula con formato `001-1234567-8` y sin duplicados.
 - Teléfono opcional con formato `809-555-0000`; correo opcional válido.
 - Materia: nombre de 3 a 150 caracteres y año entre 2020 y 2030.
+
+## Limitaciones conocidas
+
+- Es un proyecto de clase para uso local: no tiene login.
+- El borrado se hace por `GET` (`?delete=id`) con un `confirm()` del navegador,
+  sin token CSRF.
+- Las consultas usan `real_escape_string` y casteo a entero en vez de
+  sentencias preparadas.
+- `config/db.php` trae las credenciales por defecto de MAMP; cámbialas antes
+  de usarlo fuera de tu máquina.
