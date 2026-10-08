@@ -13,3 +13,10 @@ Hecho para la clase de **Lenguajes de Cuarta Generación**.
 - **Materias**: alta por curso, cuatrimestre (1ro/2do/3ro), año y docente.
 - **Calificaciones**: una nota por estudiante y materia, con cálculo en vivo
   de la nota final mientras se escribe.
+
+## Stack
+
+- PHP (sin framework) con la extensión `mysqli`
+- MySQL 5.7+ (usa una columna generada para la nota final)
+- HTML, CSS y JavaScript sin dependencias
+- Material Icons Round desde Google Fonts
